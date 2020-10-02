@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Cozette:pixelsize=12:antialias=true:autohint=true";
-static int borderpx = 15; /* 15 pixels between windows and edge of screen */
+static char *font = "CozetteVector:pixelsize=12:antialias=true:autohint=true";
+static int borderpx = 4; /* 4 pixel border from text to edge of term */
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -96,29 +96,29 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#000000",/*0*/
-	"#d41500",/*1*/
-	"#19c948",/*2*/
-	"#d6b800",/*3*/
-	"#5101d0",/*4*/
-	"#8101a3",/*5*/
-	"#25cba2",/*6*/
-	"#dfc1c1",/*7*/
+	"#000000",/*0: BLACK*/
+	"#d41500",/*1: RED*/
+	"#19c948",/*2: GREEN*/
+	"#d6b800",/*3: YELLOW*/
+	"#5101d0",/*4: BLUE*/
+	"#8101a3",/*5: MAGENTA*/
+	"#25cba2",/*6: CYAN*/
+	"#dfc1c1",/*7: GRAY*/
 
 	/* 8 bright colors */
-	"#927272",/*8*/
-	"#ff5b5b",/*9*/
-	"#59ff59",/*10*/
-	"#ffff59",/*11*/
-	"#5c5cff",/*12*/
-	"#795cee",/*13*/
-	"#ff41ff",/*14*/
-	"#5cd8d8",/*15*/
+	"#927272",/*8: gray*/
+	"#ff5b5b",/*9: red*/
+	"#59ff59",/*10: green*/
+	"#ffff59",/*11: yellow*/
+	"#5c5cff",/*12: blue*/
+	"#ff41ff",/*13: magenta*/
+	"#5cd8d8",/*14: cyan*/
+    "#fdf3f3",/*15: white*/
 
 	[255] = 0,/*16*/
 
 	/* more colors can be added after 255 to use with DefaultXX */
-    "#fdf3f3",/*17*/
+	"#795cee",/*17*/
 	"#cccccc",/*18*/
 	"#555555",/*19*/
 };
@@ -128,10 +128,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 18;
+unsigned int defaultfg = 15;
 unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+static unsigned int defaultcs = 15;
+static unsigned int defaultrcs = 15;
 
 /*
  * https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-SP-q.1D81
@@ -151,8 +151,8 @@ static unsigned int cursorshape = 5;
  * Default columns and rows numbers
  */
 
-static unsigned int cols = 80;
-static unsigned int rows = 24;
+static unsigned int cols = 97;
+static unsigned int rows = 55;
 
 /*
  * Default colour and shape of the mouse cursor
