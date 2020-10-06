@@ -65,7 +65,7 @@ static unsigned int blinktimeout = 800;
 /*
  * thickness of underline and bar cursors
  */
-static unsigned int cursorthickness = 2;
+static unsigned int cursorthickness = 1;
 
 /*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
@@ -146,7 +146,8 @@ static unsigned int defaultrcs = 15;
  * 7: Blinking st cursor
  * 8: Steady st cursor
 */
-static unsigned int cursorshape = 5;
+static unsigned int cursorstyle = 5;
+static Rune stcursor = 0x2603; /* snowman (U+2603) */
 /*
  * Default columns and rows numbers
  */
