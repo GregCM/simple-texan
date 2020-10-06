@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "CozetteVector:pixelsize=12:antialias=true:autohint=true";
+static char *font = "ProFont:pixelsize=14:antialias=true:autohint=true";
 static int borderpx = 4; /* 4 pixel border from text to edge of term */
 
 /*
@@ -95,24 +95,24 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"#000000",/*0: BLACK*/
-	"#d41500",/*1: RED*/
-	"#19c948",/*2: GREEN*/
-	"#d6b800",/*3: YELLOW*/
-	"#5101d0",/*4: BLUE*/
-	"#8101a3",/*5: MAGENTA*/
-	"#25cba2",/*6: CYAN*/
-	"#dfc1c1",/*7: GRAY*/
+/* 8 normal colors */
+    "#000000",/*0: BLACK*/
+    "#d41500",/*1: RED*/
+    "#19c948",/*2: GREEN*/
+    "#d6b800",/*3: YELLOW*/
+    "#5101d0",/*4: BLUE*/
+    "#8101a3",/*5: MAGENTA*/
+    "#25cba2",/*6: CYAN*/
+    "#dfc1c1",/*7: GRAY*/
 
-	/* 8 bright colors */
-	"#927272",/*8: gray*/
-	"#ff5b5b",/*9: red*/
-	"#59ff59",/*10: green*/
-	"#ffff59",/*11: yellow*/
-	"#5c5cff",/*12: blue*/
-	"#ff41ff",/*13: magenta*/
-	"#5cd8d8",/*14: cyan*/
+
+    "#927272",/*8: gray*/
+    "#ff5b5b",/*9: red*/
+    "#59ff59",/*10: green*/
+    "#ffff59",/*11: yellow*/
+    "#5c5cff",/*12: blue*/
+    "#ff41ff",/*13: magenta*/
+    "#5cd8d8",/*14: cyan*/
     "#fdf3f3",/*15: white*/
 
 	[255] = 0,/*16*/
